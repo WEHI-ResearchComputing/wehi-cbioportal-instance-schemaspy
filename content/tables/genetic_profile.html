@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>genetic_profile - cbioportal.cbioportal</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>cbioportal</b></a><span class="navbar-brand" style="padding-left: 0">.cbioportal</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>genetic_profile</h1><p><span id="recordNumber">1703</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="GENETIC_PROFILE_ID">GENETIC_PROFILE_ID</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="allele_specific_copy_number.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via allele_specific_copy_number_ibfk_2"><a href='allele_specific_copy_number.html'>allele_specific_copy_number</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">allele_specific_copy_number_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="alteration_driver_annotation.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via alteration_driver_annotation_ibfk_1"><a href='alteration_driver_annotation.html'>alteration_driver_annotation</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">alteration_driver_annotation_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="genetic_alteration.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via genetic_alteration_ibfk_1"><a href='genetic_alteration.html'>genetic_alteration</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">genetic_alteration_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="genetic_profile_link.REFERRED_GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via genetic_profile_link_ibfk_2"><a href='genetic_profile_link.html'>genetic_profile_link</a><span class='relatedKey'>.REFERRED_GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">genetic_profile_link_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="genetic_profile_link.REFERRING_GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via genetic_profile_link_ibfk_1"><a href='genetic_profile_link.html'>genetic_profile_link</a><span class='relatedKey'>.REFERRING_GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">genetic_profile_link_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="genetic_profile_samples.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via genetic_profile_samples_ibfk_1"><a href='genetic_profile_samples.html'>genetic_profile_samples</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">genetic_profile_samples_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mutation.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via mutation_ibfk_3"><a href='mutation.html'>mutation</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">mutation_ibfk_3</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mutation_count_by_keyword.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via mutation_count_by_keyword_ibfk_1"><a href='mutation_count_by_keyword.html'>mutation_count_by_keyword</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">mutation_count_by_keyword_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="sample_cna_event.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via sample_cna_event_ibfk_2"><a href='sample_cna_event.html'>sample_cna_event</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">sample_cna_event_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="sample_profile.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via sample_profile_ibfk_1"><a href='sample_profile.html'>sample_profile</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">sample_profile_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="structural_variant.GENETIC_PROFILE_ID references genetic_profile.GENETIC_PROFILE_ID via structural_variant_ibfk_4"><a href='structural_variant.html'>structural_variant</a><span class='relatedKey'>.GENETIC_PROFILE_ID</span></td>
+                                                <td class="constraint detail">structural_variant_ibfk_4</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="STABLE_ID">STABLE_ID</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="CANCER_STUDY_ID">CANCER_STUDY_ID</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="genetic_profile.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via genetic_profile_ibfk_1"><a href='cancer_study.html'>cancer_study</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">genetic_profile_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="GENETIC_ALTERATION_TYPE">GENETIC_ALTERATION_TYPE</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="GENERIC_ASSAY_TYPE">GENERIC_ASSAY_TYPE</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="DATATYPE">DATATYPE</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="NAME">NAME</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="DESCRIPTION">DESCRIPTION</span></td>
+                                    <td>MEDIUMTEXT</td>
+                                    <td>16777215</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="SHOW_PROFILE_IN_ANALYSIS_TAB">SHOW_PROFILE_IN_ANALYSIS_TAB</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="PIVOT_THRESHOLD">PIVOT_THRESHOLD</span></td>
+                                    <td>FLOAT</td>
+                                    <td>12</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="SORT_ORDER">SORT_ORDER</span></td>
+                                    <td>enum(&#39;ASC&#39;, &#39;DESC&#39;)</td>
+                                    <td>4</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="PATIENT_LEVEL">PATIENT_LEVEL</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>GENETIC_PROFILE_ID</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>CANCER_STUDY_ID</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>CANCER_STUDY_ID</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> STABLE_ID</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>STABLE_ID</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="866,5,1169,181">
+<area shape="rect" id="node2" href="genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="315,776,803,1197">
+<area shape="rect" id="node5" href="cancer_study.html" target="_top" title="cancer_study" alt="" coords="5,837,271,1043">
+<area shape="rect" id="node3" href="alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="852,199,1183,433">
+<area shape="rect" id="node4" href="genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="905,451,1129,597">
+<area shape="rect" id="node6" href="genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="864,615,1171,761">
+<area shape="rect" id="node7" href="genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="883,779,1152,896">
+<area shape="rect" id="node8" href="mutation.html" target="_top" title="mutation" alt="" coords="847,913,1188,1119">
+<area shape="rect" id="node9" href="mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="863,1136,1172,1312">
+<area shape="rect" id="node10" href="sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="905,1329,1129,1505">
+<area shape="rect" id="node11" href="sample_profile.html" target="_top" title="sample_profile" alt="" coords="911,1523,1123,1675">
+<area shape="rect" id="node12" href="structural_variant.html" target="_top" title="structural_variant" alt="" coords="849,1692,1186,1927">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/genetic_profile.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1443,473,1746,649">
+<area shape="rect" id="node2" href="genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="892,1125,1380,1547">
+<area shape="rect" id="node3" href="mutation_event.html" target="_top" title="mutation_event" alt="" coords="1033,921,1239,1009">
+<area shape="rect" id="node4" href="sample.html" target="_top" title="sample" alt="" coords="1043,535,1229,623">
+<area shape="rect" id="node6" href="cancer_study.html" target="_top" title="cancer_study" alt="" coords="276,704,541,909">
+<area shape="rect" id="node12" href="gene.html" target="_top" title="gene" alt="" coords="628,1233,805,1321">
+<area shape="rect" id="node23" href="patient.html" target="_top" title="patient" alt="" coords="628,391,805,479">
+<area shape="rect" id="node5" href="alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1429,667,1760,901">
+<area shape="rect" id="node7" href="reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,833,232,921">
+<area shape="rect" id="node8" href="type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,728,217,816">
+<area shape="rect" id="node9" href="cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="605,496,829,584">
+<area shape="rect" id="node10" href="clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="585,601,848,689">
+<area shape="rect" id="node11" href="cna_event.html" target="_top" title="cna_event" alt="" coords="1051,167,1221,255">
+<area shape="rect" id="node15" href="genetic_entity.html" target="_top" title="genetic_entity" alt="" coords="313,1525,505,1613">
+<area shape="rect" id="node13" href="copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1485,5,1705,93">
+<area shape="rect" id="node14" href="copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="591,707,843,795">
+<area shape="rect" id="node16" href="genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1483,1885,1707,2032">
+<area shape="rect" id="node17" href="genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1441,1276,1748,1423">
+<area shape="rect" id="node18" href="genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1460,1141,1729,1259">
+<area shape="rect" id="node19" href="gistic.html" target="_top" title="gistic" alt="" coords="636,812,797,900">
+<area shape="rect" id="node20" href="mut_sig.html" target="_top" title="mut_sig" alt="" coords="1061,429,1211,517">
+<area shape="rect" id="node21" href="mutation.html" target="_top" title="mutation" alt="" coords="1424,919,1765,1124">
+<area shape="rect" id="node22" href="mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1440,1692,1749,1868">
+<area shape="rect" id="node24" href="resource_definition.html" target="_top" title="resource_definition" alt="" coords="599,917,834,1005">
+<area shape="rect" id="node25" href="resource_study.html" target="_top" title="resource_study" alt="" coords="617,1023,817,1111">
+<area shape="rect" id="node26" href="sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1483,111,1707,287">
+<area shape="rect" id="node27" href="sample_list.html" target="_top" title="sample_list" alt="" coords="633,1128,801,1216">
+<area shape="rect" id="node28" href="sample_profile.html" target="_top" title="sample_profile" alt="" coords="1489,304,1701,456">
+<area shape="rect" id="node29" href="gene_panel.html" target="_top" title="gene_panel" alt="" coords="1051,324,1221,412">
+<area shape="rect" id="node30" href="structural_variant.html" target="_top" title="structural_variant" alt="" coords="1426,1440,1763,1675">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/genetic_profile.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

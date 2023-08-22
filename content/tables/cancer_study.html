@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>cancer_study - cbioportal.cbioportal</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="../bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="../bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="../bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="../bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="../bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='../fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='../fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="../bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="../bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="../schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="../bower/html5shiv/html5shiv.min.js"></script>
+        <script src="../bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="../index.html" class="navbar-brand"><b>cbioportal</b></a><span class="navbar-brand" style="padding-left: 0">.cbioportal</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="../index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="../columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="../constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="../relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="../orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="../anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="../routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>cancer_study</h1><p><span id="recordNumber">371</span> rows</p><br />
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                            <h3 id="Columns" class="box-title">Columns</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead align='left'>
+                                <tr>
+                                    <th>Column</th>
+                                    <th>Type</th>
+                                    <th>Size</th>
+                                    <th title='Are nulls allowed?'>Nulls</th>
+                                    <th title='Is column automatically updated?'>Auto</th>
+                                    <th title='Default value'>Default</th>
+                                    <th title='Columns in tables that reference this column'>Children</th>
+                                    <th title='Columns in tables that are referenced by this column'>Parents</th>
+                                    <th title='Comments' class="toggle"><span>Comments</span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="CANCER_STUDY_ID">CANCER_STUDY_ID</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title='Automatically updated by the database'>√</td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cancer_study_tags.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via cancer_study_tags_ibfk_1"><a href='cancer_study_tags.html'>cancer_study_tags</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">cancer_study_tags_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="clinical_attribute_meta.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via clinical_attribute_meta_ibfk_1"><a href='clinical_attribute_meta.html'>clinical_attribute_meta</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">clinical_attribute_meta_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="copy_number_seg.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via copy_number_seg_ibfk_1"><a href='copy_number_seg.html'>copy_number_seg</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">copy_number_seg_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="copy_number_seg_file.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via copy_number_seg_file_ibfk_1"><a href='copy_number_seg_file.html'>copy_number_seg_file</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">copy_number_seg_file_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="genetic_profile.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via genetic_profile_ibfk_1"><a href='genetic_profile.html'>genetic_profile</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">genetic_profile_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="gistic.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via gistic_ibfk_1"><a href='gistic.html'>gistic</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">gistic_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="mut_sig.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via mut_sig_ibfk_1"><a href='mut_sig.html'>mut_sig</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">mut_sig_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="patient.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via patient_ibfk_1"><a href='patient.html'>patient</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">patient_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_definition.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via resource_definition_ibfk_1"><a href='resource_definition.html'>resource_definition</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">resource_definition_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="resource_study.INTERNAL_ID references cancer_study.CANCER_STUDY_ID via resource_study_ibfk_1"><a href='resource_study.html'>resource_study</a><span class='relatedKey'>.INTERNAL_ID</span></td>
+                                                <td class="constraint detail">resource_study_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="sample_list.CANCER_STUDY_ID references cancer_study.CANCER_STUDY_ID via sample_list_ibfk_1"><a href='sample_list.html'>sample_list</a><span class='relatedKey'>.CANCER_STUDY_ID</span></td>
+                                                <td class="constraint detail">sample_list_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Cascade on delete:&#10;Deletion of parent deletes child'>C</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="CANCER_STUDY_IDENTIFIER">CANCER_STUDY_IDENTIFIER</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="TYPE_OF_CANCER_ID">TYPE_OF_CANCER_ID</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>63</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cancer_study.TYPE_OF_CANCER_ID references type_of_cancer.TYPE_OF_CANCER_ID via cancer_study_ibfk_1"><a href='type_of_cancer.html'>type_of_cancer</a><span class='relatedKey'>.TYPE_OF_CANCER_ID</span></td>
+                                                <td class="constraint detail">cancer_study_ibfk_1</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="NAME">NAME</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="DESCRIPTION">DESCRIPTION</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>1024</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="PUBLIC">PUBLIC</span></td>
+                                    <td>BIT</td>
+                                    <td>1</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="PMID">PMID</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>1024</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="CITATION">CITATION</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>200</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="GROUPS">GROUPS</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>200</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="STATUS">STATUS</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="IMPORT_DATE">IMPORT_DATE</span></td>
+                                    <td>DATETIME</td>
+                                    <td>26</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>null</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="REFERENCE_GENOME_ID">REFERENCE_GENOME_ID</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="cancer_study.REFERENCE_GENOME_ID references reference_genome.REFERENCE_GENOME_ID via cancer_study_ibfk_2"><a href='reference_genome.html'>reference_genome</a><span class='relatedKey'>.REFERENCE_GENOME_ID</span></td>
+                                                <td class="constraint detail">cancer_study_ibfk_2</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-sitemap"></i>
+                            <h3 id="Indexes" class="box-title">Indexes</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
+                                <thead>
+                                <tr>
+                                    <th>Constraint Name</th>
+                                    <th>Type</th>
+                                    <th>Sort</th>
+                                    <th>Column(s)</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
+                                    <td>Primary key</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>CANCER_STUDY_ID</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> CANCER_STUDY_IDENTIFIER</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>CANCER_STUDY_IDENTIFIER</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>REFERENCE_GENOME_ID</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>REFERENCE_GENOME_ID</td>
+                                </tr>
+                                <tr>
+                                    <td title='Indexed'>TYPE_OF_CANCER_ID</td>
+                                    <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>TYPE_OF_CANCER_ID</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div><!-- /.box-body -->
+                    </div>
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 id="Relationships" class="box-title">Relationships</h3>
+                            <div class="box-tools pull-right">
+                                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                            </div>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom"><!-- Tabs within a box -->
+                                <h5>Close relationships within degrees of separation</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#oneDegreeImg-chart" data-toggle="tab" aria-expanded="true">One</a></li>
+                                    <li class=""><a href="#twodegreesDegreeImg-chart" data-toggle="tab" aria-expanded="true">Two degrees</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
+<area shape="rect" id="node1" href="cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,881,660,1303">
+<area shape="rect" id="node2" href="reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,1207,244,1353">
+<area shape="rect" id="node3" href="type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,943,229,1060">
+<area shape="rect" id="node4" href="cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="750,5,974,123">
+<area shape="rect" id="node5" href="clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="731,140,993,287">
+<area shape="rect" id="node6" href="copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="752,304,972,480">
+<area shape="rect" id="node7" href="copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="736,497,988,644">
+<area shape="rect" id="node8" href="genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="704,661,1020,837">
+<area shape="rect" id="node9" href="gistic.html" target="_top" title="gistic" alt="" coords="765,855,959,1001">
+<area shape="rect" id="node10" href="mut_sig.html" target="_top" title="mut_sig" alt="" coords="763,1019,961,1165">
+<area shape="rect" id="node11" href="patient.html" target="_top" title="patient" alt="" coords="765,1183,959,1329">
+<area shape="rect" id="node12" href="resource_definition.html" target="_top" title="resource_definition" alt="" coords="745,1347,979,1493">
+<area shape="rect" id="node13" href="resource_study.html" target="_top" title="resource_study" alt="" coords="762,1511,962,1663">
+<area shape="rect" id="node14" href="sample_list.html" target="_top" title="sample_list" alt="" coords="765,1680,959,1856">
+</map>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/cancer_study.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="twodegreesDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="twoDegreesRelationshipsDiagram" name="twoDegreesRelationshipsDiagram">
+<area shape="rect" id="node1" href="allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1375,672,1677,760">
+<area shape="rect" id="node2" href="genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="1011,416,1327,592">
+<area shape="rect" id="node3" href="sample.html" target="_top" title="sample" alt="" coords="1076,820,1261,908">
+<area shape="rect" id="node5" href="cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,812,660,1233">
+<area shape="rect" id="node11" href="patient.html" target="_top" title="patient" alt="" coords="738,867,933,1013">
+<area shape="rect" id="node4" href="alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1371,356,1681,444">
+<area shape="rect" id="node6" href="reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,1256,244,1403">
+<area shape="rect" id="node7" href="type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,873,229,991">
+<area shape="rect" id="node8" href="cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="723,568,947,685">
+<area shape="rect" id="node9" href="clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="704,703,967,849">
+<area shape="rect" id="node10" href="clinical_event.html" target="_top" title="clinical_event" alt="" coords="1075,925,1263,1013">
+<area shape="rect" id="node12" href="clinical_patient.html" target="_top" title="clinical_patient" alt="" coords="1069,609,1269,697">
+<area shape="rect" id="node13" href="copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1416,883,1636,1059">
+<area shape="rect" id="node14" href="copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="709,1067,961,1213">
+<area shape="rect" id="node15" href="genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1414,40,1638,128">
+<area shape="rect" id="node16" href="genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1409,145,1643,233">
+<area shape="rect" id="node17" href="genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1391,251,1661,339">
+<area shape="rect" id="node18" href="gistic.html" target="_top" title="gistic" alt="" coords="1071,1284,1266,1431">
+<area shape="rect" id="node19" href="gistic_to_gene.html" target="_top" title="gistic_to_gene" alt="" coords="1431,1287,1621,1375">
+<area shape="rect" id="node20" href="gene.html" target="_top" title="gene" alt="" coords="1080,1179,1257,1267">
+<area shape="rect" id="node21" href="mut_sig.html" target="_top" title="mut_sig" alt="" coords="1427,1392,1625,1539">
+<area shape="rect" id="node22" href="mutation.html" target="_top" title="mutation" alt="" coords="1437,777,1615,865">
+<area shape="rect" id="node23" href="mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1371,1076,1681,1164">
+<area shape="rect" id="node24" href="reference_genome_gene.html" target="_top" title="reference_genome_gene" alt="" coords="1390,1556,1662,1644">
+<area shape="rect" id="node25" href="resource_definition.html" target="_top" title="resource_definition" alt="" coords="718,5,953,152">
+<area shape="rect" id="node26" href="resource_patient.html" target="_top" title="resource_patient" alt="" coords="1061,715,1276,803">
+<area shape="rect" id="node27" href="resource_study.html" target="_top" title="resource_study" alt="" coords="735,169,935,321">
+<area shape="rect" id="node28" href="sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1414,461,1638,549">
+<area shape="rect" id="node29" href="sample_list.html" target="_top" title="sample_list" alt="" coords="738,339,933,515">
+<area shape="rect" id="node30" href="sample_profile.html" target="_top" title="sample_profile" alt="" coords="1428,567,1624,655">
+<area shape="rect" id="node31" href="structural_variant.html" target="_top" title="structural_variant" alt="" coords="1414,1181,1638,1269">
+</map>
+                                        <a name='diagram'><img id="twodegreesDegreeImg" src="../diagrams/tables/cancer_study.2degrees.png" usemap="#twoDegreesRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+                <script>
+                    var config = {
+                        pagination: true
+                    }
+                </script>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="../bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="../bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="../bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="../bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="../bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="../bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="../bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="../bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="../bower/pdfmake/pdfmake.min.js"></script>
+        <script src="../bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="../bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="../bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="../bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="../bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="../bower/codemirror/codemirror.js"></script>
+        <script src="../bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="../bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="table.js"></script>
+        <script src="../schemaSpy.js"></script>
+    </body>
+</html>

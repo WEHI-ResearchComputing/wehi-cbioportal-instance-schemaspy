@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>cbioportal.cbioportal</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>cbioportal</b></a><span class="navbar-brand" style="padding-left: 0">.cbioportal</span>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>All Relationships</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Diagrams</h3>
+                        </div>
+                        <div class="box-body">
+                            <div class="nav-tabs-custom">
+                                <!-- Tabs within a box -->
+                                <h5>By default only columns that are primary keys, foreign keys or indexes are shown.</h5>
+                                <ul class="nav nav-tabs pull-left ui-sortable-handle">
+                                    <li class="active"><a href="#compactDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact</a></li>
+                                    <li class=""><a href="#largeDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large</a></li>
+                                    <li class=""><a href="#compactimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Compact Implied</a></li>
+                                    <li class=""><a href="#largeimpliedDegreeImg-chart" data-toggle="tab" aria-expanded="true">Large Implied</a></li>
+                                </ul>
+                                <div class="tab-content no-padding">
+                                    <div class="chart tab-pane active" id="compactDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactRelationshipsDiagram" name="compactRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="607,2248,870,2395">
+<area shape="rect" id="node19" href="tables/cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,2324,553,2529">
+<area shape="rect" id="node2" href="tables/reference_genome_gene.html" target="_top" title="reference_genome_gene" alt="" coords="946,180,1218,327">
+<area shape="rect" id="node20" href="tables/gene.html" target="_top" title="gene" alt="" coords="629,772,849,948">
+<area shape="rect" id="node39" href="tables/reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,1181,244,1328">
+<area shape="rect" id="node3" href="tables/genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1343,169,1567,316">
+<area shape="rect" id="node23" href="tables/genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="924,1436,1240,1612">
+<area shape="rect" id="node41" href="tables/genetic_entity.html" target="_top" title="genetic_entity" alt="" coords="325,555,517,672">
+<area shape="rect" id="node4" href="tables/mutation_event.html" target="_top" title="mutation_event" alt="" coords="957,903,1207,1255">
+<area shape="rect" id="node5" href="tables/geneset.html" target="_top" title="geneset" alt="" coords="637,1499,840,1704">
+<area shape="rect" id="node6" href="tables/mut_sig.html" target="_top" title="mut_sig" alt="" coords="983,2079,1181,2225">
+<area shape="rect" id="node7" href="tables/sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1343,2055,1567,2231">
+<area shape="rect" id="node21" href="tables/cna_event.html" target="_top" title="cna_event" alt="" coords="991,1629,1173,1781">
+<area shape="rect" id="node42" href="tables/sample.html" target="_top" title="sample" alt="" coords="989,2383,1175,2529">
+<area shape="rect" id="node8" href="tables/allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1303,1141,1606,1317">
+<area shape="rect" id="node9" href="tables/geneset_hierarchy_node.html" target="_top" title="geneset_hierarchy_node" alt="" coords="603,2448,875,2600">
+<area shape="rect" id="node10" href="tables/gistic_to_gene.html" target="_top" title="gistic_to_gene" alt="" coords="987,1939,1177,2061">
+<area shape="rect" id="node32" href="tables/gistic.html" target="_top" title="gistic" alt="" coords="641,1721,836,1868">
+<area shape="rect" id="node11" href="tables/mutation.html" target="_top" title="mutation" alt="" coords="1284,919,1625,1124">
+<area shape="rect" id="node12" href="tables/genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1320,1335,1589,1452">
+<area shape="rect" id="node13" href="tables/clinical_patient.html" target="_top" title="clinical_patient" alt="" coords="982,2952,1182,3099">
+<area shape="rect" id="node47" href="tables/patient.html" target="_top" title="patient" alt="" coords="641,3116,836,3263">
+<area shape="rect" id="node14" href="tables/resource_study.html" target="_top" title="resource_study" alt="" coords="639,1885,839,2037">
+<area shape="rect" id="node15" href="tables/data_access_tokens.html" target="_top" title="data_access_tokens" alt="" coords="1337,5,1572,152">
+<area shape="rect" id="node22" href="tables/users.html" target="_top" title="users" alt="" coords="1021,35,1143,152">
+<area shape="rect" id="node16" href="tables/generic_entity_properties.html" target="_top" title="generic_entity_properties" alt="" coords="597,219,880,395">
+<area shape="rect" id="node17" href="tables/gene_panel.html" target="_top" title="gene_panel" alt="" coords="997,1272,1167,1419">
+<area shape="rect" id="node18" href="tables/sample_list.html" target="_top" title="sample_list" alt="" coords="641,2055,836,2231">
+<area shape="rect" id="node29" href="tables/type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,2383,229,2500">
+<area shape="rect" id="node24" href="tables/copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="613,2653,865,2800">
+<area shape="rect" id="node25" href="tables/alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1289,1803,1620,2037">
+<area shape="rect" id="node26" href="tables/genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1301,1469,1608,1616">
+<area shape="rect" id="node27" href="tables/copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1345,2721,1565,2897">
+<area shape="rect" id="node28" href="tables/sample_profile.html" target="_top" title="sample_profile" alt="" coords="1349,1633,1561,1785">
+<area shape="rect" id="node30" href="tables/gene_alias.html" target="_top" title="gene_alias" alt="" coords="991,461,1173,584">
+<area shape="rect" id="node31" href="tables/resource_sample.html" target="_top" title="resource_sample" alt="" coords="1348,2248,1561,2400">
+<area shape="rect" id="node33" href="tables/structural_variant.html" target="_top" title="structural_variant" alt="" coords="1286,667,1623,901">
+<area shape="rect" id="node34" href="tables/mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1300,473,1609,649">
+<area shape="rect" id="node35" href="tables/gene_panel_list.html" target="_top" title="gene_panel_list" alt="" coords="1355,333,1555,456">
+<area shape="rect" id="node36" href="tables/clinical_sample.html" target="_top" title="clinical_sample" alt="" coords="1355,2417,1555,2564">
+<area shape="rect" id="node37" href="tables/cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="627,2817,851,2935">
+<area shape="rect" id="node38" href="tables/sample_list_list.html" target="_top" title="sample_list_list" alt="" coords="1355,2581,1555,2704">
+<area shape="rect" id="node40" href="tables/clinical_event_data.html" target="_top" title="clinical_event_data" alt="" coords="1339,3285,1570,3403">
+<area shape="rect" id="node45" href="tables/clinical_event.html" target="_top" title="clinical_event" alt="" coords="981,3285,1183,3461">
+<area shape="rect" id="node43" href="tables/cosmic_mutation.html" target="_top" title="cosmic_mutation" alt="" coords="967,601,1197,777">
+<area shape="rect" id="node44" href="tables/geneset_hierarchy_leaf.html" target="_top" title="geneset_hierarchy_leaf" alt="" coords="951,2243,1213,2365">
+<area shape="rect" id="node46" href="tables/geneset_gene.html" target="_top" title="geneset_gene" alt="" coords="989,1799,1175,1921">
+<area shape="rect" id="node48" href="tables/resource_definition.html" target="_top" title="resource_definition" alt="" coords="621,2952,856,3099">
+<area shape="rect" id="node49" href="tables/resource_patient.html" target="_top" title="resource_patient" alt="" coords="975,3116,1189,3268">
+</map>
+                                        <a name='diagram'><img id="compactDegreeImg" src="diagrams/summary/relationships.real.compact.png" usemap="#compactRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeRelationshipsDiagram" name="largeRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="607,1589,870,1859">
+<area shape="rect" id="node19" href="tables/cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,1836,553,2252">
+<area shape="rect" id="node2" href="tables/reference_genome_gene.html" target="_top" title="reference_genome_gene" alt="" coords="946,4080,1218,4320">
+<area shape="rect" id="node20" href="tables/gene.html" target="_top" title="gene" alt="" coords="629,3140,849,3321">
+<area shape="rect" id="node39" href="tables/reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,2945,244,3215">
+<area shape="rect" id="node3" href="tables/genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1343,5091,1567,5243">
+<area shape="rect" id="node23" href="tables/genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="924,3193,1240,3609">
+<area shape="rect" id="node41" href="tables/genetic_entity.html" target="_top" title="genetic_entity" alt="" coords="325,3283,517,3435">
+<area shape="rect" id="node4" href="tables/mutation_event.html" target="_top" title="mutation_event" alt="" coords="957,2056,1207,2736">
+<area shape="rect" id="node5" href="tables/geneset.html" target="_top" title="geneset" alt="" coords="637,2531,840,2771">
+<area shape="rect" id="node6" href="tables/mut_sig.html" target="_top" title="mut_sig" alt="" coords="983,1180,1181,1449">
+<area shape="rect" id="node7" href="tables/sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1343,1455,1567,1636">
+<area shape="rect" id="node21" href="tables/cna_event.html" target="_top" title="cna_event" alt="" coords="991,1887,1173,2039">
+<area shape="rect" id="node42" href="tables/sample.html" target="_top" title="sample" alt="" coords="989,981,1175,1163">
+<area shape="rect" id="node8" href="tables/allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1303,1653,1606,2040">
+<area shape="rect" id="node9" href="tables/geneset_hierarchy_node.html" target="_top" title="geneset_hierarchy_node" alt="" coords="603,1420,875,1572">
+<area shape="rect" id="node10" href="tables/gistic_to_gene.html" target="_top" title="gistic_to_gene" alt="" coords="987,1747,1177,1869">
+<area shape="rect" id="node32" href="tables/gistic.html" target="_top" title="gistic" alt="" coords="641,2788,836,3087">
+<area shape="rect" id="node11" href="tables/mutation.html" target="_top" title="mutation" alt="" coords="1284,2057,1625,2972">
+<area shape="rect" id="node12" href="tables/genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1320,2989,1589,3112">
+<area shape="rect" id="node13" href="tables/clinical_patient.html" target="_top" title="clinical_patient" alt="" coords="982,752,1182,904">
+<area shape="rect" id="node47" href="tables/patient.html" target="_top" title="patient" alt="" coords="641,752,836,904">
+<area shape="rect" id="node14" href="tables/resource_study.html" target="_top" title="resource_study" alt="" coords="639,993,839,1145">
+<area shape="rect" id="node15" href="tables/data_access_tokens.html" target="_top" title="data_access_tokens" alt="" coords="1337,5,1572,187">
+<area shape="rect" id="node22" href="tables/users.html" target="_top" title="users" alt="" coords="1021,35,1143,187">
+<area shape="rect" id="node16" href="tables/generic_entity_properties.html" target="_top" title="generic_entity_properties" alt="" coords="597,3339,880,3520">
+<area shape="rect" id="node17" href="tables/gene_panel.html" target="_top" title="gene_panel" alt="" coords="997,3627,1167,3779">
+<area shape="rect" id="node18" href="tables/sample_list.html" target="_top" title="sample_list" alt="" coords="641,1163,836,1403">
+<area shape="rect" id="node29" href="tables/type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,1895,229,2105">
+<area shape="rect" id="node24" href="tables/copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="613,1876,865,2087">
+<area shape="rect" id="node25" href="tables/alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1289,1168,1620,1437">
+<area shape="rect" id="node26" href="tables/genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1301,3299,1608,3451">
+<area shape="rect" id="node27" href="tables/copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1345,373,1565,672">
+<area shape="rect" id="node28" href="tables/sample_profile.html" target="_top" title="sample_profile" alt="" coords="1349,3129,1561,3281">
+<area shape="rect" id="node30" href="tables/gene_alias.html" target="_top" title="gene_alias" alt="" coords="991,3904,1173,4027">
+<area shape="rect" id="node31" href="tables/resource_sample.html" target="_top" title="resource_sample" alt="" coords="1348,829,1561,981">
+<area shape="rect" id="node33" href="tables/structural_variant.html" target="_top" title="structural_variant" alt="" coords="1286,3468,1623,4705">
+<area shape="rect" id="node34" href="tables/mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1300,4723,1609,4933">
+<area shape="rect" id="node35" href="tables/gene_panel_list.html" target="_top" title="gene_panel_list" alt="" coords="1355,4951,1555,5073">
+<area shape="rect" id="node36" href="tables/clinical_sample.html" target="_top" title="clinical_sample" alt="" coords="1355,999,1555,1151">
+<area shape="rect" id="node37" href="tables/cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="627,2104,851,2227">
+<area shape="rect" id="node38" href="tables/sample_list_list.html" target="_top" title="sample_list_list" alt="" coords="1355,689,1555,812">
+<area shape="rect" id="node40" href="tables/clinical_event_data.html" target="_top" title="clinical_event_data" alt="" coords="1339,204,1570,356">
+<area shape="rect" id="node45" href="tables/clinical_event.html" target="_top" title="clinical_event" alt="" coords="981,524,1183,735">
+<area shape="rect" id="node43" href="tables/cosmic_mutation.html" target="_top" title="cosmic_mutation" alt="" coords="967,2753,1197,3140">
+<area shape="rect" id="node44" href="tables/geneset_hierarchy_leaf.html" target="_top" title="geneset_hierarchy_leaf" alt="" coords="951,1467,1213,1589">
+<area shape="rect" id="node46" href="tables/geneset_gene.html" target="_top" title="geneset_gene" alt="" coords="989,1607,1175,1729">
+<area shape="rect" id="node48" href="tables/resource_definition.html" target="_top" title="resource_definition" alt="" coords="621,2244,856,2513">
+<area shape="rect" id="node49" href="tables/resource_patient.html" target="_top" title="resource_patient" alt="" coords="975,355,1189,507">
+</map>
+                                        <a name='diagram'><img id="largeDegreeImg" src="diagrams/summary/relationships.real.large.png" usemap="#largeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="compactimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="compactImpliedRelationshipsDiagram" name="compactImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="607,2383,870,2529">
+<area shape="rect" id="node19" href="tables/cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,2459,553,2664">
+<area shape="rect" id="node2" href="tables/reference_genome_gene.html" target="_top" title="reference_genome_gene" alt="" coords="946,315,1218,461">
+<area shape="rect" id="node20" href="tables/gene.html" target="_top" title="gene" alt="" coords="629,907,849,1083">
+<area shape="rect" id="node40" href="tables/reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,1317,244,1464">
+<area shape="rect" id="node3" href="tables/genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1343,304,1567,451">
+<area shape="rect" id="node23" href="tables/genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="924,1571,1240,1747">
+<area shape="rect" id="node42" href="tables/genetic_entity.html" target="_top" title="genetic_entity" alt="" coords="325,697,517,815">
+<area shape="rect" id="node4" href="tables/mutation_event.html" target="_top" title="mutation_event" alt="" coords="957,1037,1207,1389">
+<area shape="rect" id="node5" href="tables/geneset.html" target="_top" title="geneset" alt="" coords="637,1633,840,1839">
+<area shape="rect" id="node6" href="tables/mut_sig.html" target="_top" title="mut_sig" alt="" coords="983,2213,1181,2360">
+<area shape="rect" id="node7" href="tables/sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1343,2189,1567,2365">
+<area shape="rect" id="node21" href="tables/cna_event.html" target="_top" title="cna_event" alt="" coords="991,1764,1173,1916">
+<area shape="rect" id="node43" href="tables/sample.html" target="_top" title="sample" alt="" coords="989,2517,1175,2664">
+<area shape="rect" id="node8" href="tables/allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1303,1276,1606,1452">
+<area shape="rect" id="node9" href="tables/geneset_hierarchy_node.html" target="_top" title="geneset_hierarchy_node" alt="" coords="603,2583,875,2735">
+<area shape="rect" id="node10" href="tables/gistic_to_gene.html" target="_top" title="gistic_to_gene" alt="" coords="987,2073,1177,2196">
+<area shape="rect" id="node32" href="tables/gistic.html" target="_top" title="gistic" alt="" coords="641,1856,836,2003">
+<area shape="rect" id="node11" href="tables/mutation.html" target="_top" title="mutation" alt="" coords="1284,1053,1625,1259">
+<area shape="rect" id="node12" href="tables/genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1320,1469,1589,1587">
+<area shape="rect" id="node13" href="tables/clinical_patient.html" target="_top" title="clinical_patient" alt="" coords="982,3087,1182,3233">
+<area shape="rect" id="node48" href="tables/patient.html" target="_top" title="patient" alt="" coords="641,3251,836,3397">
+<area shape="rect" id="node14" href="tables/resource_study.html" target="_top" title="resource_study" alt="" coords="639,2020,839,2172">
+<area shape="rect" id="node15" href="tables/data_access_tokens.html" target="_top" title="data_access_tokens" alt="" coords="1337,5,1572,152">
+<area shape="rect" id="node22" href="tables/users.html" target="_top" title="users" alt="" coords="1021,103,1143,220">
+<area shape="rect" id="node16" href="tables/generic_entity_properties.html" target="_top" title="generic_entity_properties" alt="" coords="597,357,880,533">
+<area shape="rect" id="node17" href="tables/gene_panel.html" target="_top" title="gene_panel" alt="" coords="997,1407,1167,1553">
+<area shape="rect" id="node18" href="tables/sample_list.html" target="_top" title="sample_list" alt="" coords="641,2189,836,2365">
+<area shape="rect" id="node29" href="tables/type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,2517,229,2635">
+<area shape="rect" id="node24" href="tables/copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="613,2788,865,2935">
+<area shape="rect" id="node25" href="tables/alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1289,1937,1620,2172">
+<area shape="rect" id="node26" href="tables/genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1301,1604,1608,1751">
+<area shape="rect" id="node27" href="tables/copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1345,2856,1565,3032">
+<area shape="rect" id="node28" href="tables/sample_profile.html" target="_top" title="sample_profile" alt="" coords="1349,1768,1561,1920">
+<area shape="rect" id="node30" href="tables/gene_alias.html" target="_top" title="gene_alias" alt="" coords="991,596,1173,719">
+<area shape="rect" id="node31" href="tables/resource_sample.html" target="_top" title="resource_sample" alt="" coords="1348,2383,1561,2535">
+<area shape="rect" id="node33" href="tables/structural_variant.html" target="_top" title="structural_variant" alt="" coords="1286,801,1623,1036">
+<area shape="rect" id="node34" href="tables/mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1300,608,1609,784">
+<area shape="rect" id="node35" href="tables/gene_panel_list.html" target="_top" title="gene_panel_list" alt="" coords="1355,468,1555,591">
+<area shape="rect" id="node36" href="tables/authorities.html" target="_top" title="authorities" alt="" coords="1371,169,1539,287">
+<area shape="rect" id="node37" href="tables/clinical_sample.html" target="_top" title="clinical_sample" alt="" coords="1355,2552,1555,2699">
+<area shape="rect" id="node38" href="tables/cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="627,2952,851,3069">
+<area shape="rect" id="node39" href="tables/sample_list_list.html" target="_top" title="sample_list_list" alt="" coords="1355,2716,1555,2839">
+<area shape="rect" id="node41" href="tables/clinical_event_data.html" target="_top" title="clinical_event_data" alt="" coords="1339,3420,1570,3537">
+<area shape="rect" id="node46" href="tables/clinical_event.html" target="_top" title="clinical_event" alt="" coords="981,3420,1183,3596">
+<area shape="rect" id="node44" href="tables/cosmic_mutation.html" target="_top" title="cosmic_mutation" alt="" coords="967,736,1197,912">
+<area shape="rect" id="node45" href="tables/geneset_hierarchy_leaf.html" target="_top" title="geneset_hierarchy_leaf" alt="" coords="951,2377,1213,2500">
+<area shape="rect" id="node47" href="tables/geneset_gene.html" target="_top" title="geneset_gene" alt="" coords="989,1933,1175,2056">
+<area shape="rect" id="node49" href="tables/resource_definition.html" target="_top" title="resource_definition" alt="" coords="621,3087,856,3233">
+<area shape="rect" id="node50" href="tables/resource_patient.html" target="_top" title="resource_patient" alt="" coords="975,3251,1189,3403">
+</map>
+                                        <a name='diagram'><img id="compactimpliedDegreeImg" src="diagrams/summary/relationships.implied.compact.png" usemap="#compactImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                    <div class="chart tab-pane " id="largeimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
+                                        <map id="largeImpliedRelationshipsDiagram" name="largeImpliedRelationshipsDiagram">
+<area shape="rect" id="node1" href="tables/clinical_attribute_meta.html" target="_top" title="clinical_attribute_meta" alt="" coords="607,1729,870,1999">
+<area shape="rect" id="node19" href="tables/cancer_study.html" target="_top" title="cancer_study" alt="" coords="288,1976,553,2392">
+<area shape="rect" id="node2" href="tables/reference_genome_gene.html" target="_top" title="reference_genome_gene" alt="" coords="946,4220,1218,4460">
+<area shape="rect" id="node20" href="tables/gene.html" target="_top" title="gene" alt="" coords="629,3280,849,3461">
+<area shape="rect" id="node40" href="tables/reference_genome.html" target="_top" title="reference_genome" alt="" coords="5,3085,244,3355">
+<area shape="rect" id="node3" href="tables/genetic_alteration.html" target="_top" title="genetic_alteration" alt="" coords="1343,5231,1567,5383">
+<area shape="rect" id="node23" href="tables/genetic_profile.html" target="_top" title="genetic_profile" alt="" coords="924,3333,1240,3749">
+<area shape="rect" id="node42" href="tables/genetic_entity.html" target="_top" title="genetic_entity" alt="" coords="325,3423,517,3575">
+<area shape="rect" id="node4" href="tables/mutation_event.html" target="_top" title="mutation_event" alt="" coords="957,2196,1207,2876">
+<area shape="rect" id="node5" href="tables/geneset.html" target="_top" title="geneset" alt="" coords="637,2671,840,2911">
+<area shape="rect" id="node6" href="tables/mut_sig.html" target="_top" title="mut_sig" alt="" coords="983,1320,1181,1589">
+<area shape="rect" id="node7" href="tables/sample_cna_event.html" target="_top" title="sample_cna_event" alt="" coords="1343,1595,1567,1776">
+<area shape="rect" id="node21" href="tables/cna_event.html" target="_top" title="cna_event" alt="" coords="991,2027,1173,2179">
+<area shape="rect" id="node43" href="tables/sample.html" target="_top" title="sample" alt="" coords="989,1121,1175,1303">
+<area shape="rect" id="node8" href="tables/allele_specific_copy_number.html" target="_top" title="allele_specific_copy_number" alt="" coords="1303,1793,1606,2180">
+<area shape="rect" id="node9" href="tables/geneset_hierarchy_node.html" target="_top" title="geneset_hierarchy_node" alt="" coords="603,1560,875,1712">
+<area shape="rect" id="node10" href="tables/gistic_to_gene.html" target="_top" title="gistic_to_gene" alt="" coords="987,1887,1177,2009">
+<area shape="rect" id="node32" href="tables/gistic.html" target="_top" title="gistic" alt="" coords="641,2928,836,3227">
+<area shape="rect" id="node11" href="tables/mutation.html" target="_top" title="mutation" alt="" coords="1284,2197,1625,3112">
+<area shape="rect" id="node12" href="tables/genetic_profile_samples.html" target="_top" title="genetic_profile_samples" alt="" coords="1320,3129,1589,3252">
+<area shape="rect" id="node13" href="tables/clinical_patient.html" target="_top" title="clinical_patient" alt="" coords="982,892,1182,1044">
+<area shape="rect" id="node48" href="tables/patient.html" target="_top" title="patient" alt="" coords="641,892,836,1044">
+<area shape="rect" id="node14" href="tables/resource_study.html" target="_top" title="resource_study" alt="" coords="639,1133,839,1285">
+<area shape="rect" id="node15" href="tables/data_access_tokens.html" target="_top" title="data_access_tokens" alt="" coords="1337,5,1572,187">
+<area shape="rect" id="node22" href="tables/users.html" target="_top" title="users" alt="" coords="1021,120,1143,272">
+<area shape="rect" id="node16" href="tables/generic_entity_properties.html" target="_top" title="generic_entity_properties" alt="" coords="597,3479,880,3660">
+<area shape="rect" id="node17" href="tables/gene_panel.html" target="_top" title="gene_panel" alt="" coords="997,3767,1167,3919">
+<area shape="rect" id="node18" href="tables/sample_list.html" target="_top" title="sample_list" alt="" coords="641,1303,836,1543">
+<area shape="rect" id="node29" href="tables/type_of_cancer.html" target="_top" title="type_of_cancer" alt="" coords="20,2035,229,2245">
+<area shape="rect" id="node24" href="tables/copy_number_seg_file.html" target="_top" title="copy_number_seg_file" alt="" coords="613,2016,865,2227">
+<area shape="rect" id="node25" href="tables/alteration_driver_annotation.html" target="_top" title="alteration_driver_annotation" alt="" coords="1289,1308,1620,1577">
+<area shape="rect" id="node26" href="tables/genetic_profile_link.html" target="_top" title="genetic_profile_link" alt="" coords="1301,3439,1608,3591">
+<area shape="rect" id="node27" href="tables/copy_number_seg.html" target="_top" title="copy_number_seg" alt="" coords="1345,513,1565,812">
+<area shape="rect" id="node28" href="tables/sample_profile.html" target="_top" title="sample_profile" alt="" coords="1349,3269,1561,3421">
+<area shape="rect" id="node30" href="tables/gene_alias.html" target="_top" title="gene_alias" alt="" coords="991,4044,1173,4167">
+<area shape="rect" id="node31" href="tables/resource_sample.html" target="_top" title="resource_sample" alt="" coords="1348,969,1561,1121">
+<area shape="rect" id="node33" href="tables/structural_variant.html" target="_top" title="structural_variant" alt="" coords="1286,3608,1623,4845">
+<area shape="rect" id="node34" href="tables/mutation_count_by_keyword.html" target="_top" title="mutation_count_by_keyword" alt="" coords="1300,4863,1609,5073">
+<area shape="rect" id="node35" href="tables/gene_panel_list.html" target="_top" title="gene_panel_list" alt="" coords="1355,5091,1555,5213">
+<area shape="rect" id="node36" href="tables/authorities.html" target="_top" title="authorities" alt="" coords="1371,204,1539,327">
+<area shape="rect" id="node37" href="tables/clinical_sample.html" target="_top" title="clinical_sample" alt="" coords="1355,1139,1555,1291">
+<area shape="rect" id="node38" href="tables/cancer_study_tags.html" target="_top" title="cancer_study_tags" alt="" coords="627,2244,851,2367">
+<area shape="rect" id="node39" href="tables/sample_list_list.html" target="_top" title="sample_list_list" alt="" coords="1355,829,1555,952">
+<area shape="rect" id="node41" href="tables/clinical_event_data.html" target="_top" title="clinical_event_data" alt="" coords="1339,344,1570,496">
+<area shape="rect" id="node46" href="tables/clinical_event.html" target="_top" title="clinical_event" alt="" coords="981,664,1183,875">
+<area shape="rect" id="node44" href="tables/cosmic_mutation.html" target="_top" title="cosmic_mutation" alt="" coords="967,2893,1197,3280">
+<area shape="rect" id="node45" href="tables/geneset_hierarchy_leaf.html" target="_top" title="geneset_hierarchy_leaf" alt="" coords="951,1607,1213,1729">
+<area shape="rect" id="node47" href="tables/geneset_gene.html" target="_top" title="geneset_gene" alt="" coords="989,1747,1175,1869">
+<area shape="rect" id="node49" href="tables/resource_definition.html" target="_top" title="resource_definition" alt="" coords="621,2384,856,2653">
+<area shape="rect" id="node50" href="tables/resource_patient.html" target="_top" title="resource_patient" alt="" coords="975,495,1189,647">
+</map>
+                                        <a name='diagram'><img id="largeimpliedDegreeImg" src="diagrams/summary/relationships.implied.large.png" usemap="#largeImpliedRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- /.box-body -->
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.4</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src="relationships.js"></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>
