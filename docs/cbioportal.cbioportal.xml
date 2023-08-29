@@ -30,7 +30,7 @@
             <column ascending="true" name="SAMPLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="alteration_driver_annotation" numRows="25229" remarks="Alteration driver annotation" type="TABLE">
+      <table catalog="cbioportal" name="alteration_driver_annotation" numRows="24448" remarks="Alteration driver annotation" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ALTERATION_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="alteration_driver_annotation_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_profile"/>
@@ -69,7 +69,7 @@
          </column>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="AUTHORITY" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
       </table>
-      <table catalog="cbioportal" name="cancer_study" numRows="371" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="cancer_study" numRows="379" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="CANCER_STUDY_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="CANCER_STUDY_ID" foreignKey="cancer_study_tags_ibfk_1" implied="false" onDeleteCascade="true" table="cancer_study_tags"/>
             <child catalog="cbioportal" column="CANCER_STUDY_ID" foreignKey="clinical_attribute_meta_ibfk_1" implied="false" onDeleteCascade="true" table="clinical_attribute_meta"/>
@@ -94,7 +94,7 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="CITATION" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="GROUPS" nullable="true" remarks="" size="200" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="9" name="STATUS" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="IMPORT_DATE" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="10" name="IMPORT_DATE" nullable="true" remarks="" size="19" type="DATETIME" typeCode="93"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="11" name="REFERENCE_GENOME_ID" nullable="true" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="REFERENCE_GENOME_ID" foreignKey="cancer_study_ibfk_2" implied="false" onDeleteCascade="false" table="reference_genome"/>
          </column>
@@ -122,7 +122,7 @@
             <column ascending="true" name="CANCER_STUDY_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="clinical_attribute_meta" numRows="11966" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="clinical_attribute_meta" numRows="11812" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ATTR_ID" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="DISPLAY_NAME" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="DESCRIPTION" nullable="false" remarks="" size="2048" type="VARCHAR" typeCode="12"/>
@@ -142,7 +142,7 @@
             <column ascending="true" name="CANCER_STUDY_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="clinical_event" numRows="270137" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="clinical_event" numRows="258105" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="CLINICAL_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="CLINICAL_EVENT_ID" foreignKey="clinical_event_data_ibfk_1" implied="false" onDeleteCascade="true" table="clinical_event_data"/>
          </column>
@@ -161,7 +161,7 @@
             <column ascending="true" name="EVENT_TYPE"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="clinical_event_data" numRows="653569" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="clinical_event_data" numRows="653658" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="CLINICAL_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="CLINICAL_EVENT_ID" foreignKey="clinical_event_data_ibfk_1" implied="false" onDeleteCascade="true" table="clinical_event"/>
          </column>
@@ -171,7 +171,7 @@
             <column ascending="true" name="CLINICAL_EVENT_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="clinical_patient" numRows="2724094" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="clinical_patient" numRows="2189400" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="INTERNAL_ID" foreignKey="clinical_patient_ibfk_1" implied="false" onDeleteCascade="true" table="patient"/>
          </column>
@@ -184,7 +184,7 @@
             <column ascending="true" name="ATTR_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="clinical_sample" numRows="3491122" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="clinical_sample" numRows="4230657" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="INTERNAL_ID" foreignKey="clinical_sample_ibfk_1" implied="false" onDeleteCascade="true" table="sample"/>
          </column>
@@ -197,7 +197,7 @@
             <column ascending="true" name="ATTR_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="cna_event" numRows="56304" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="cna_event" numRows="54090" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="CNA_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="CNA_EVENT_ID" foreignKey="sample_cna_event_ibfk_1" implied="false" onDeleteCascade="false" table="sample_cna_event"/>
          </column>
@@ -217,7 +217,7 @@
             <column ascending="true" name="ALTERATION"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="copy_number_seg" numRows="19767758" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="copy_number_seg" numRows="19431636" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="SEG_ID" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="CANCER_STUDY_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="CANCER_STUDY_ID" foreignKey="copy_number_seg_ibfk_1" implied="false" onDeleteCascade="true" table="cancer_study"/>
@@ -242,7 +242,7 @@
             <column ascending="true" name="SAMPLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="copy_number_seg_file" numRows="204" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="copy_number_seg_file" numRows="208" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="SEG_FILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="CANCER_STUDY_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="CANCER_STUDY_ID" foreignKey="copy_number_seg_file_ibfk_1" implied="false" onDeleteCascade="true" table="cancer_study"/>
@@ -258,7 +258,7 @@
             <column ascending="true" name="CANCER_STUDY_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="cosmic_mutation" numRows="1529990" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="cosmic_mutation" numRows="1418869" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="COSMIC_MUTATION_ID" nullable="false" remarks="" size="30" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="CHR" nullable="true" remarks="" size="5" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="START_POSITION" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
@@ -288,8 +288,8 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="USERNAME" nullable="false" remarks="" size="128" type="VARCHAR" typeCode="12">
             <parent catalog="cbioportal" column="EMAIL" foreignKey="data_access_tokens_ibfk_1" implied="false" onDeleteCascade="true" table="users"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="EXPIRATION" nullable="false" remarks="" size="26" type="DATETIME" typeCode="93"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="CREATION" nullable="false" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="EXPIRATION" nullable="false" remarks="" size="19" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="CREATION" nullable="false" remarks="" size="19" type="DATETIME" typeCode="93"/>
          <primaryKey column="TOKEN" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="TOKEN"/>
@@ -298,7 +298,7 @@
             <column ascending="true" name="USERNAME"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gene" numRows="41548" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gene" numRows="42398" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ENTREZ_GENE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="ENTREZ_GENE_ID" foreignKey="cna_event_ibfk_1" implied="false" onDeleteCascade="false" table="cna_event"/>
             <child catalog="cbioportal" column="ENTREZ_GENE_ID" foreignKey="cosmic_mutation_ibfk_1" implied="false" onDeleteCascade="false" table="cosmic_mutation"/>
@@ -330,7 +330,7 @@
             <column ascending="true" name="HUGO_GENE_SYMBOL"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gene_alias" numRows="53944" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gene_alias" numRows="53233" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ENTREZ_GENE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="ENTREZ_GENE_ID" foreignKey="gene_alias_ibfk_1" implied="false" onDeleteCascade="false" table="gene"/>
          </column>
@@ -342,7 +342,7 @@
             <column ascending="true" name="GENE_ALIAS"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gene_panel" numRows="55" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gene_panel" numRows="51" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="INTERNAL_ID" foreignKey="gene_panel_list_ibfk_1" implied="false" onDeleteCascade="true" table="gene_panel_list"/>
             <child catalog="cbioportal" column="PANEL_ID" foreignKey="sample_profile_ibfk_3" implied="false" onDeleteCascade="false" table="sample_profile"/>
@@ -357,7 +357,7 @@
             <column ascending="true" name="STABLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gene_panel_list" numRows="20187" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gene_panel_list" numRows="21287" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="INTERNAL_ID" foreignKey="gene_panel_list_ibfk_1" implied="false" onDeleteCascade="true" table="gene_panel"/>
          </column>
@@ -374,7 +374,7 @@
             <column ascending="true" name="GENE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="generic_entity_properties" numRows="1033421" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="generic_entity_properties" numRows="1057023" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="GENETIC_ENTITY_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="ID" foreignKey="generic_entity_properties_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_entity"/>
@@ -390,7 +390,7 @@
             <column ascending="true" name="NAME"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="geneset" numRows="30888" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="geneset" numRows="30788" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="GENESET_ID" foreignKey="geneset_gene_ibfk_2" implied="false" onDeleteCascade="true" table="geneset_gene"/>
             <child catalog="cbioportal" column="GENESET_ID" foreignKey="geneset_hierarchy_leaf_ibfk_2" implied="false" onDeleteCascade="true" table="geneset_hierarchy_leaf"/>
@@ -416,7 +416,7 @@
             <column ascending="true" name="NAME"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="geneset_gene" numRows="3860874" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="geneset_gene" numRows="3666217" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="GENESET_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="ID" foreignKey="geneset_gene_ibfk_2" implied="false" onDeleteCascade="true" table="geneset"/>
          </column>
@@ -465,7 +465,7 @@
             <column ascending="true" name="PARENT_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="genetic_alteration" numRows="27625496" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="genetic_alteration" numRows="30339799" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="genetic_alteration_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_profile"/>
          </column>
@@ -483,7 +483,7 @@
             <column ascending="true" name="GENETIC_ENTITY_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="genetic_entity" numRows="552740" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="genetic_entity" numRows="485999" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="GENETIC_ENTITY_ID" foreignKey="gene_ibfk_1" implied="false" onDeleteCascade="true" table="gene"/>
             <child catalog="cbioportal" column="GENETIC_ENTITY_ID" foreignKey="generic_entity_properties_ibfk_1" implied="false" onDeleteCascade="true" table="generic_entity_properties"/>
@@ -497,7 +497,7 @@
             <column ascending="true" name="ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="genetic_profile" numRows="1703" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="genetic_profile" numRows="1757" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="allele_specific_copy_number_ibfk_2" implied="false" onDeleteCascade="true" table="allele_specific_copy_number"/>
             <child catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="alteration_driver_annotation_ibfk_1" implied="false" onDeleteCascade="true" table="alteration_driver_annotation"/>
@@ -535,7 +535,7 @@
             <column ascending="true" name="STABLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="genetic_profile_link" numRows="1" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="genetic_profile_link" numRows="2" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="REFERRING_GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="genetic_profile_link_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_profile"/>
          </column>
@@ -553,7 +553,7 @@
             <column ascending="true" name="REFERRED_GENETIC_PROFILE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="genetic_profile_samples" numRows="1389" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="genetic_profile_samples" numRows="1230" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="genetic_profile_samples_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_profile"/>
          </column>
@@ -562,7 +562,7 @@
             <column ascending="true" name="GENETIC_PROFILE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gistic" numRows="3122" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gistic" numRows="2823" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="GISTIC_ROI_ID" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5">
             <child catalog="cbioportal" column="GISTIC_ROI_ID" foreignKey="gistic_to_gene_ibfk_2" implied="false" onDeleteCascade="true" table="gistic_to_gene"/>
          </column>
@@ -583,7 +583,7 @@
             <column ascending="true" name="CANCER_STUDY_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="gistic_to_gene" numRows="174798" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="gistic_to_gene" numRows="162440" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="GISTIC_ROI_ID" nullable="false" remarks="" size="19" type="BIGINT" typeCode="-5">
             <parent catalog="cbioportal" column="GISTIC_ROI_ID" foreignKey="gistic_to_gene_ibfk_2" implied="false" onDeleteCascade="true" table="gistic"/>
          </column>
@@ -600,11 +600,11 @@
             <column ascending="true" name="ENTREZ_GENE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="info" numRows="1" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="info" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="DB_SCHEMA_VERSION" nullable="true" remarks="" size="24" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="GENESET_VERSION" nullable="true" remarks="" size="24" type="VARCHAR" typeCode="12"/>
       </table>
-      <table catalog="cbioportal" name="mut_sig" numRows="2484" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="mut_sig" numRows="2414" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="CANCER_STUDY_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="CANCER_STUDY_ID" foreignKey="mut_sig_ibfk_1" implied="false" onDeleteCascade="true" table="cancer_study"/>
          </column>
@@ -626,7 +626,7 @@
             <column ascending="true" name="ENTREZ_GENE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="mutation" numRows="9060179" remarks="Mutation Data Details" type="TABLE">
+      <table catalog="cbioportal" name="mutation" numRows="9896588" remarks="Mutation Data Details" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="MUTATION_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="MUTATION_EVENT_ID" foreignKey="mutation_ibfk_1" implied="false" onDeleteCascade="false" table="mutation_event"/>
          </column>
@@ -690,7 +690,7 @@
             <column ascending="true" name="SAMPLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="mutation_count_by_keyword" numRows="7882687" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="mutation_count_by_keyword" numRows="7501365" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="mutation_count_by_keyword_ibfk_1" implied="false" onDeleteCascade="true" table="genetic_profile"/>
          </column>
@@ -708,7 +708,7 @@
             <column ascending="true" name="KEYWORD"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="mutation_event" numRows="5008015" remarks="Mutation Data" type="TABLE">
+      <table catalog="cbioportal" name="mutation_event" numRows="4942068" remarks="Mutation Data" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="MUTATION_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="MUTATION_EVENT_ID" foreignKey="allele_specific_copy_number_ibfk_1" implied="false" onDeleteCascade="false" table="allele_specific_copy_number"/>
             <child catalog="cbioportal" column="MUTATION_EVENT_ID" foreignKey="mutation_ibfk_1" implied="false" onDeleteCascade="false" table="mutation"/>
@@ -758,7 +758,7 @@
             <column ascending="true" name="MUTATION_TYPE"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="patient" numRows="179705" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="patient" numRows="185940" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="PATIENT_ID" foreignKey="clinical_event_ibfk_1" implied="false" onDeleteCascade="true" table="clinical_event"/>
             <child catalog="cbioportal" column="INTERNAL_ID" foreignKey="clinical_patient_ibfk_1" implied="false" onDeleteCascade="true" table="clinical_patient"/>
@@ -787,7 +787,7 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="BUILD_NAME" nullable="false" remarks="" size="64" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="GENOME_SIZE" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="URL" nullable="false" remarks="" size="256" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="RELEASE_DATE" nullable="true" remarks="" size="26" type="DATETIME" typeCode="93"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="RELEASE_DATE" nullable="true" remarks="" size="19" type="DATETIME" typeCode="93"/>
          <primaryKey column="REFERENCE_GENOME_ID" sequenceNumberInPK="1"/>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="REFERENCE_GENOME_ID"/>
@@ -796,7 +796,7 @@
             <column ascending="true" name="BUILD_NAME"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="reference_genome_gene" numRows="41652" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="reference_genome_gene" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="ENTREZ_GENE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="ENTREZ_GENE_ID" foreignKey="reference_genome_gene_ibfk_2" implied="false" onDeleteCascade="true" table="gene"/>
          </column>
@@ -817,7 +817,7 @@
             <column ascending="true" name="REFERENCE_GENOME_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="resource_definition" numRows="3" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="resource_definition" numRows="2" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="RESOURCE_ID" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="DISPLAY_NAME" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="DESCRIPTION" nullable="true" remarks="" size="2048" type="VARCHAR" typeCode="12"/>
@@ -882,7 +882,7 @@
             <column ascending="true" name="URL"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="sample" numRows="186290" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="sample" numRows="192666" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="cbioportal" column="SAMPLE_ID" foreignKey="allele_specific_copy_number_ibfk_3" implied="false" onDeleteCascade="true" table="allele_specific_copy_number"/>
             <child catalog="cbioportal" column="SAMPLE_ID" foreignKey="alteration_driver_annotation_ibfk_2" implied="false" onDeleteCascade="true" table="alteration_driver_annotation"/>
@@ -908,7 +908,7 @@
             <column ascending="true" name="PATIENT_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="sample_cna_event" numRows="20886506" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="sample_cna_event" numRows="21385376" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="CNA_EVENT_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="CNA_EVENT_ID" foreignKey="sample_cna_event_ibfk_1" implied="false" onDeleteCascade="false" table="cna_event"/>
          </column>
@@ -935,7 +935,7 @@
             <column ascending="true" name="SAMPLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="sample_list" numRows="2155" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="sample_list" numRows="2091" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="LIST_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="STABLE_ID" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="CATEGORY" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
@@ -955,7 +955,7 @@
             <column ascending="true" name="STABLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="sample_list_list" numRows="889296" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="sample_list_list" numRows="767188" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="LIST_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="SAMPLE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="INTERNAL_ID" foreignKey="sample_list_list_ibfk_1" implied="false" onDeleteCascade="true" table="sample"/>
@@ -970,7 +970,7 @@
             <column ascending="true" name="SAMPLE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="sample_profile" numRows="656471" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="sample_profile" numRows="617481" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="SAMPLE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="INTERNAL_ID" foreignKey="sample_profile_ibfk_2" implied="false" onDeleteCascade="true" table="sample"/>
          </column>
@@ -994,7 +994,7 @@
             <column ascending="true" name="GENETIC_PROFILE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="structural_variant" numRows="85159" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="structural_variant" numRows="80274" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="INTERNAL_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="GENETIC_PROFILE_ID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="cbioportal" column="GENETIC_PROFILE_ID" foreignKey="structural_variant_ibfk_4" implied="false" onDeleteCascade="true" table="genetic_profile"/>
@@ -1060,7 +1060,7 @@
             <column ascending="true" name="SITE2_ENTREZ_GENE_ID"/>
          </index>
       </table>
-      <table catalog="cbioportal" name="type_of_cancer" numRows="853" remarks="" type="TABLE">
+      <table catalog="cbioportal" name="type_of_cancer" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="TYPE_OF_CANCER_ID" nullable="false" remarks="" size="63" type="VARCHAR" typeCode="12">
             <child catalog="cbioportal" column="TYPE_OF_CANCER_ID" foreignKey="cancer_study_ibfk_1" implied="false" onDeleteCascade="false" table="cancer_study"/>
          </column>
